@@ -1,13 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import { UserDataContext } from '../context/UserContext'
 
 const Navbar = ({ theme, setTheme }) => {
 
   const [inputValue, setInputValue] = useState('')
 
+  const data = useContext(UserDataContext)
+
   return (
     <div className='flex justify-center items-center gap-4 p-2'>
-      <h1>theme is {theme}</h1>
+      <h1>theme is {theme} {data}</h1>
 
       <form
         onSubmit={(e) => {

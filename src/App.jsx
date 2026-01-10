@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Navbar from './pages/Navbar'
 
 const App = () => {
-  const [theme, setTheme] = useState('light') 
+  const [theme, setTheme] = useState('light')
+
 
   return (
     <div>
